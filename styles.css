@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 82.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #c2c7d1, #3498eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  display: flex;
+  padding: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.score {
+  position: relative;
+  margin: 20px;
+  font-size: 5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+}
+
+.btn-restart {
+  top: 3rem;
+}
+
+.btn-roll {
+  left: 17%;
+  transform: translateX(-17%);
+  top: 23rem;
+}
+
+.btn-hold {
+  left: 15.5%;
+  transform: translateX(-16%);
+  top: 28rem;
+}

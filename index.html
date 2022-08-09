@@ -8,13 +8,19 @@
     <title>21 Game</title>
   </head>
   <body>
-    <h1>It is going to be a number game.</h1>
-    <section>
-      <h2>Section one</h2>
-    </section>
-    <section>
-      <h2>Section two</h2>
-    </section>
+    <main>
+      <section class="player player-active">
+        <h2 class="name">Player one</h2>
+        <p class="score">0</p>
+      </section>
+      <section class="player">
+        <h2 class="name">Player two</h2>
+        <p class="score">0</p>
+      </section>
+      <button class="btn btn-restart">🔄 Restart</button>
+      <button class="btn btn-roll">🎁 Roll a number!</button>
+      <button class="btn btn-hold">🧸 Hold a number (11+)</button>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
