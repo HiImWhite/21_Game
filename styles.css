@@ -26,8 +26,6 @@ main {
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 42px;
-  overflow: hidden;
-  display: flex;
 }
 
 .player {
@@ -82,14 +80,30 @@ main {
   top: 3rem;
 }
 
-.btn-roll {
+.btn-roll-0 {
   left: 17%;
   transform: translateX(-17%);
   top: 23rem;
 }
 
-.btn-hold {
+.btn-roll-1 {
+  left: 75%;
+  transform: translateX(-53%);
+  top: 23rem;
+}
+
+.btn-hold-0 {
   left: 15.5%;
   transform: translateX(-16%);
   top: 28rem;
+}
+
+.btn-hold-1 {
+  left: 72%;
+  transform: translateX(-41%);
+  top: 28rem;
+}
+
+.hidden {
+  display: none;
 }
