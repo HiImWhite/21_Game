@@ -107,3 +107,7 @@ main {
 .hidden {
   display: none;
 }
+
+.winner {
+  background-color: greenyellow;
+}

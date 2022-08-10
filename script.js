@@ -15,6 +15,8 @@ const init = function () {
   playerActive = 0;
   score = [0, 0];
   playing = true;
+
+  btnHold.classList.add("hidden");
 };
 
 init();
@@ -43,4 +45,28 @@ btnRoll.addEventListener("click", function () {
       btnHold.classList.add("hidden");
     }
   }
+  if (score[playerActive] >= 21) {
+    btnRoll.classList.add("hidden");
+    btnHold.classList.add("hidden");
+    switchPlayer();
+  }
+  if (!playing) {
+    summary0 = score[0] - 21;
+    summary1 = score[1] - 21;
+    if (summary0 < 0) summary0 * -1;
+    if (summary1 < 0) summary1 * -1;
+    if (summary0 > summary1) {
+      playerOne.classList.toggle("winner");
+    } else {
+      playerTwo.classList.toggle("winner");
+    }
+  }
 });
+
+//Holding score
+btnHold.addEventListener("click", function () {
+  playing = false;
+});
+
+//Restart game
+//btnRestart.addEventListener("click", init);
