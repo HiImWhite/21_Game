@@ -37,5 +37,10 @@ btnRoll.addEventListener("click", function () {
       score[playerActive];
 
     switchPlayer();
+    if (score[playerActive] >= 11) {
+      btnHold.classList.remove("hidden");
+    } else {
+      btnHold.classList.add("hidden");
+    }
   }
 });
