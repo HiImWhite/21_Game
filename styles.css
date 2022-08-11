@@ -93,14 +93,14 @@ main {
 }
 
 .btn-hold-0 {
-  left: 15.5%;
-  transform: translateX(-16%);
+  left: 17%;
+  transform: translateX(-17%);
   top: 28rem;
 }
 
 .btn-hold-1 {
-  left: 72%;
-  transform: translateX(-41%);
+  left: 75%;
+  transform: translateX(-53%);
   top: 28rem;
 }
 

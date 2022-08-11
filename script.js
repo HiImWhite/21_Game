@@ -49,23 +49,15 @@ btnRoll.addEventListener("click", function () {
     btnRoll.classList.add("hidden");
     btnHold.classList.add("hidden");
     switchPlayer();
-  }
-  if (!playing) {
-    summary0 = score[0] - 21;
-    summary1 = score[1] - 21;
-    if (summary0 < 0) summary0 * -1;
-    if (summary1 < 0) summary1 * -1;
-    if (summary0 > summary1) {
-      playerOne.classList.toggle("winner");
-    } else {
-      playerTwo.classList.toggle("winner");
+    if (btnRoll.classList === "hidden" && btnHold.classList === "hidden") {
+      switchPlayer();
     }
   }
 });
 
 //Holding score
 btnHold.addEventListener("click", function () {
-  playing = false;
+  switchPlayer();
 });
 
 //Restart game
