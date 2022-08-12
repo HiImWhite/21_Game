@@ -2,8 +2,8 @@
 
 const playerOne = document.querySelector(".player-one");
 const playerTwo = document.querySelector(".player-two");
-const scoreOne = document.getElementById("score--one");
-const scoreTwo = document.getElementById("score--two");
+const scoreOne = document.getElementById("score--0");
+const scoreTwo = document.getElementById("score--1");
 
 const btnRoll = document.querySelector(".btn-roll-0");
 const btnHold = document.querySelector(".btn-hold-0");
@@ -11,12 +11,20 @@ const btnRestart = document.querySelector(".btn-restart");
 
 let playerActive, playing, score;
 
+//Starting conditions
 const init = function () {
   playerActive = 0;
   score = [0, 0];
   playing = true;
 
+  scoreOne.textContent = 0;
+  scoreTwo.textContent = 0;
+
   btnHold.classList.add("hidden");
+  playerOne.classList.remove("player-winner");
+  playerTwo.classList.remove("player-winner");
+  playerOne.classList.add("player-active");
+  playerTwo.classList.remove("player-active");
 };
 
 init();
@@ -37,7 +45,6 @@ btnRoll.addEventListener("click", function () {
     score[playerActive] += number;
     document.getElementById(`score--${playerActive}`).textContent =
       score[playerActive];
-
     switchPlayer();
     if (score[playerActive] >= 11) {
       btnHold.classList.remove("hidden");
@@ -61,4 +68,4 @@ btnHold.addEventListener("click", function () {
 });
 
 //Restart game
-//btnRestart.addEventListener("click", init);
+btnRestart.addEventListener("click", init);

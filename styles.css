@@ -76,6 +76,14 @@ main {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
 }
 
+.btn:active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .btn-restart {
   top: 3rem;
 }
