@@ -25,6 +25,8 @@ const init = function () {
   playerTwo.classList.remove("player-winner");
   playerOne.classList.add("player-active");
   playerTwo.classList.remove("player-active");
+  playerOne.classList.remove("draw");
+  playerTwo.classList.remove("draw");
 };
 
 init();
@@ -53,11 +55,14 @@ btnRoll.addEventListener("click", function () {
     }
   }
   if (score[playerActive] >= 21) {
-    btnRoll.classList.add("hidden");
-    btnHold.classList.add("hidden");
     switchPlayer();
-    if (btnRoll.classList === "hidden" && btnHold.classList === "hidden") {
-      switchPlayer();
+    if (score[0] >= 21 && score[1] >= 21) {
+      btnHold.classList.add("hidden");
+      btnRoll.classList.add("hidden");
+    }
+    if (score[0] === score[1]) {
+      playerOne.classList.toggle("draw");
+      playerTwo.classList.toggle("draw");
     }
   }
 });

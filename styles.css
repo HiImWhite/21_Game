@@ -119,3 +119,7 @@ main {
 .winner {
   background-color: greenyellow;
 }
+
+.draw {
+  background-color: rgb(236, 236, 104);
+}
